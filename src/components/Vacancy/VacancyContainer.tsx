@@ -50,6 +50,11 @@ const VacancyContainer = (props: VacancyIterface) => {
 
 const VacancyStyled = styled.div`
   box-shadow: 0 1.5rem 2rem -0.5rem rgba(91, 164, 164, 0.25);
+  transition: 400ms all;
+  &:hover {
+    transform: translateY(-5px);
+  }
+
   @media (max-width: 850px) {
     & {
       display: block;

@@ -15,6 +15,7 @@ interface Job {
 interface JobsStateInterface {
   jobs: Job[];
   filteredJobs: Job[];
+  tags: Array<string>;
 }
 
 const initialState: JobsStateInterface = {
@@ -54,14 +55,31 @@ const initialState: JobsStateInterface = {
     },
   ],
   filteredJobs: [],
+  tags: [],
 };
 
 export const jobsSlice = createSlice({
   name: "jobs",
   initialState,
-  reducers: {},
+  reducers: {
+    addTag: (state, action) => {
+      if (!state.tags.includes(action.payload)) {
+        state.tags.push(action.payload);
+      }
+    },
+    removeTag: (state, action) => {
+      state.tags = state.tags.filter((tag) => tag !== action.payload);
+    },
+    filterJobs: (state, action) => {
+      state.filteredJobs = action.payload;
+    },
+    clearFilter: (state) => {
+      state.filteredJobs = [];
+      state.tags = [];
+    },
+  },
 });
 
-export const {} = jobsSlice.actions;
+export const { addTag, removeTag, filterJobs, clearFilter } = jobsSlice.actions;
 
 export default jobsSlice.reducer;

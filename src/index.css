@@ -18,3 +18,26 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.vacancy-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.vacancy-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Стили для удаления вакансии */
+.vacancy-exit {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.vacancy-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+}
