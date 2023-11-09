@@ -22,7 +22,7 @@ const VacancyList = () => {
     filteredData.length > 0 ? jobsList.filteredJobs : jobsList.jobs;
 
   return (
-    <div className="flex flex-col gap-12 mt-10 transition-all duration-1000">
+    <div className="flex flex-col gap-12 my-10">
       {renderedData.map((item, index) => (
         <VacancyContainer key={index} {...item} />
       ))}
