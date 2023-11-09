@@ -15,7 +15,10 @@ interface VacancyIterface {
 
 const VacancyContainer = (props: VacancyIterface) => {
   return (
-    <VacancyStyled className="bg-white flex justify-between items-center p-6 rounded-md relative vacancy">
+    <VacancyStyled
+      data-aos="fade-right"
+      className="bg-white flex justify-between items-center p-6 rounded-md relative vacancy"
+    >
       <div className="flex">
         <div className="mr-4 vacancy__company-image">
           <img src={`/assets/images/${props.img}`} alt="img" />

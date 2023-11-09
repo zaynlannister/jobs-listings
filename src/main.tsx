@@ -4,6 +4,17 @@ import App from "./App.tsx";
 import "./index.css";
 import { Provider } from "react-redux";
 import store from "./store/store.ts";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init({
+  offset: 100,
+  delay: 50,
+  duration: 500,
+  easing: "ease-in-out",
+  mirror: true,
+  once: true,
+});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
