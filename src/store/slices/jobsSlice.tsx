@@ -9,39 +9,51 @@ interface Job {
   country: string;
   company: string;
   tags: Array<string>;
+  isNew: boolean;
 }
 
 interface JobsStateInterface {
   jobs: Job[];
   filteredJobs: Job[];
-  isLoading: boolean;
 }
 
 const initialState: JobsStateInterface = {
   jobs: [
     {
       id: 1,
-      img: "",
+      img: "eyecam-co.svg",
       publishedTime: "1d ago",
       position: "Frontend Dev",
       isFullTime: true,
       country: "USA",
-      company: "Google",
+      company: "Eyecam",
       tags: ["Frontend", "Html", "Css", "Js"],
+      isNew: true,
     },
     {
       id: 2,
-      img: "",
+      img: "insure.svg",
       publishedTime: "3d ago",
       position: "Backend Developer",
       isFullTime: false,
       country: "UZB",
-      company: "EPAM",
+      company: "Insure",
       tags: ["Backend", "Node js", "Sql"],
+      isNew: false,
+    },
+    {
+      id: 3,
+      img: "insure.svg",
+      publishedTime: "3d ago",
+      position: "Backend Developer",
+      isFullTime: false,
+      country: "UZB",
+      company: "Insure",
+      tags: ["Node js", "Sql"],
+      isNew: true,
     },
   ],
   filteredJobs: [],
-  isLoading: false,
 };
 
 export const jobsSlice = createSlice({

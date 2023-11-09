@@ -1,8 +1,14 @@
+import Header from "./components/Header/Header";
+import VacancyList from "./components/Vacancy/VacancyList";
+
 const App = () => {
   return (
-    <div className="container">
-      <p>text</p>
-    </div>
+    <>
+      <Header />
+      <div className="container">
+        <VacancyList />
+      </div>
+    </>
   );
 };
 
