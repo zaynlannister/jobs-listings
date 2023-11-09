@@ -10,6 +10,7 @@ body {
   padding: 0;
   background-color: #effafa;
   color: #5ba4a4;
+  box-sizing: border-box;
 }
 
 .container {
