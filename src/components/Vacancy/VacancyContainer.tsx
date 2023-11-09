@@ -19,7 +19,7 @@ const VacancyContainer = (props: VacancyIterface) => {
       data-aos="fade-right"
       className="bg-white flex justify-between items-center p-6 rounded-md relative vacancy"
     >
-      <span className="vacancy__line absolute w-[4px] h-full bg-[#5ba4a4] left-0 rounded-s"></span>
+      <span className="vacancy__line absolute w-[4px] top-0 h-full bg-[#5ba4a4] left-0 rounded-s"></span>
       <div className="flex">
         <div className="mr-4 vacancy__company-image">
           <img src={`/assets/images/${props.img}`} alt="img" />
