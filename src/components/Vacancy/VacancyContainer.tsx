@@ -19,6 +19,7 @@ const VacancyContainer = (props: VacancyIterface) => {
       data-aos="fade-right"
       className="bg-white flex justify-between items-center p-6 rounded-md relative vacancy"
     >
+      <span className="vacancy__line absolute w-[4px] h-full bg-[#5ba4a4] left-0 rounded-s"></span>
       <div className="flex">
         <div className="mr-4 vacancy__company-image">
           <img src={`/assets/images/${props.img}`} alt="img" />
@@ -54,8 +55,15 @@ const VacancyContainer = (props: VacancyIterface) => {
 const VacancyStyled = styled.div`
   box-shadow: 0 1.5rem 2rem -0.5rem rgba(91, 164, 164, 0.25);
   transition: 400ms all;
+  .vacancy__line {
+    transition: 200ms all;
+    opacity: 0;
+  }
   &:hover {
-    transform: translateY(-5px);
+    .vacancy__line {
+      transition: 200ms all;
+      opacity: 9;
+    }
   }
 
   @media (max-width: 850px) {
